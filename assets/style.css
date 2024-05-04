@@ -1,0 +1,112 @@
+:root {
+    --text: #1900ff;
+    --background: #e165e6;
+}
+*{
+    background-color: black;
+    color: var(--text);
+}
+header{
+    display: flex;
+    text-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+       
+}
+header h1 {
+
+    color: var(--text);
+    font-size: 2.5 rem;
+}
+
+header p{
+    color:white;
+    text-align: center;
+}
+
+.content{
+    flex: 1;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    max-width: 400px;
+    max-height: 400px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    border-color: white;
+    border-style: dashed;
+    margin: 24px;
+}
+
+.card h2 {
+    margin-top: -20px;
+    position: relative;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/*Animate Transition Glow*/
+
+.card .card h2{
+    
+        border-radius: 8px;
+        transition: all .5s ease-in-out;
+}
+.card:hover, .card:hover .card h2{
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}    
+    
+.code {
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%,
+                                        rgba(232, 102, 236, 0.6)100%);
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;   
+}
+
+.code code {
+    color: white;
+    text-align: left;
+    margin-left: 0px;
+    background-color: transparent;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+footer{
+    text-align: center;
+}
+footer span {
+    color: red;
+}
+@media screen and {min-width: 992px;
+    .content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        }
+}
+
+@media screen and {max-width: 992px;
+    .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
