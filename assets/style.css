@@ -11,6 +11,7 @@ header{
     text-wrap: wrap;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10px;
        
 }
 header h1 {
@@ -19,32 +20,35 @@ header h1 {
     font-size: 2.5 rem;
 }
 
-header p{
+header p {
     color:white;
     text-align: center;
 }
 
 .content{
+    
     flex: 1;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     justify-content: space-between;
     align-items: center;
 }
 
 .card{
-    max-width: 400px;
-    max-height: 400px;
+   
+    width: 95%;
+    height: 87%;
     font-size: 16px;
     display: flex;
     flex-direction: column;
     border-color: white;
     border-style: dashed;
-    margin: 24px;
+    margin: 2%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card h2 {
+    
     margin-top: -20px;
     position: relative;
     border-radius: 20px;
@@ -52,6 +56,8 @@ header p{
     border-style: solid;
     margin-right: 10px;
     margin-left: 10px;
+    text-align: center;
+    
 }
 /*Animate Transition Glow*/
 
@@ -64,14 +70,16 @@ header p{
     box-shadow: inset 0px 0px 8px
     rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
 }    
-    
+
+
 .code {
     background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%,
                                         rgba(232, 102, 236, 0.6)100%);
     margin: 5px;
     border-radius: 5px;
     max-width: 100%;
-    max-height: 100%;   
+    max-height: 100%;
+    
 }
 
 .code code {
@@ -89,7 +97,7 @@ footer{
 footer span {
     color: red;
 }
-@media screen and {min-width: 992px;
+@media screen and (min-width: 992px) {
     .content{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -97,7 +105,7 @@ footer span {
         }
 }
 
-@media screen and {max-width: 992px;
+@media screen and (max-width: 992px) {
     .content{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -107,6 +115,8 @@ footer span {
 
 @media screen and (max-width: 768px) {
     .content {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
+       
 }
